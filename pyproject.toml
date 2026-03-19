@@ -1,0 +1,21 @@
+[project]
+name = "rome"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "venice",
+]
+
+[tool.uv.sources]
+venice = { path = "venice-0.1.0-py3-none-any.whl" }
+venice-cli = { path = "venice_cli-0.1.0-cp314-cp314-macosx_10_12_x86_64.whl" }
+
+[tool.venice]
+slot = 1
+
+[dependency-groups]
+dev = [
+    "venice-cli",
+]
