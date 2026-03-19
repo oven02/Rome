@@ -1,8 +1,23 @@
-from venice import AbstractMotor, Gearset, Direction
+from venice import V5Motor, Gearset, Direction
+#import rome.odom
 
 def main():
-    my_motor = AbstractMotor()
-    my_motor.set_voltage(10.0)
+    vert_mL = V5Motor(
+        1,
+        Direction.FORWARD,
+        Gearset.GREEN
+    )
+    vert_mR = V5Motor(
+        2,
+        Direction.FORWARD,
+        Gearset.GREEN
+    )
+    #tracking = rome.odom.Tracking(0, 0, 0, 0)
+
+    while True:
+        pass
+        #tracking.Update(vert_mL, vert_mR, 4.0, 1.0)
+        #print(tracking)
 
 
 if __name__ == "__main__":
