@@ -1,5 +1,5 @@
 from venice import V5Motor
-#import math
+import math
 #import vasyncio
 
 
@@ -17,7 +17,7 @@ class Tracking:
 
     def __str__(self):
         return f"{self.coords}"
-'''
+
     def Update(self, vert_mL: V5Motor, vert_mR: V5Motor, diameter: float, driveRatio: float):
             self.horiz = 0
             self.vertL = vert_mL.raw_position() * (diameter * 3.14159) * driveRatio / 360  # I used 4 inch wheels, so the 4 would be changed to what every size wheels And the 3/5 is the gear ratio
@@ -50,4 +50,4 @@ class Tracking:
             self.prev[2] = self.vertR
             self.prev[0] = self.horiz
 
-            return (self.coords[0], self.coords[1], self.coords[2])'''
+            return (self.coords[0], self.coords[1], self.coords[2])
